@@ -17,6 +17,7 @@ import WalletConnector from "./components/WalletConnector.jsx";
 import WalletConnectButton from "./components/WalletConnectButton.jsx";
 import { useWeb3 } from "./components/contexts/Web3Context.js";
 import Web3Modal from "./components/Web3Modal.js";
+import { redactAddress } from "./components/web3utils.js";
 
 const App = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -131,16 +132,18 @@ const App = () => {
             </header>
             <div className={`menu ${menuOpen ? "open" : ""}`}>
               <div className="menu-content">
-              <div className="menu-header">
-                <div>
-                    <button class="wallet-button" onClick={openWeb3Modal}>Connect Wallet</button>
-                </div>
-                <div>
+                <div className="menu-header">
+                  <div>
+                    <button class="wallet-button" onClick={openWeb3Modal}>
+                      Connect Wallet
+                    </button>
+                  </div>
+                  <div>
                     <div className="accountinfo">
-                        {account ? <p>{account}</p> : <p></p>}
+                      {account ? <p>{redactAddress(account)}</p> : <p></p>}
                     </div>
+                  </div>
                 </div>
-            </div>
                 {/* Buttons with images */}
                 <button
                   className={`menu-button ${
