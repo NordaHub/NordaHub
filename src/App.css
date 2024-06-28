@@ -1,0 +1,884 @@
+/* src/App.css */
+@import url("https://fonts.googleapis.com/css2?family=Flow+Block&display=swap");
+
+:root::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-image: url("./images/bg_pattern.png");
+  background-size: 19%;
+  background-position: flex;
+  background-repeat: repeat;
+  background-color: #55555552;
+  font-family: "Arial", sans-serif; /* Adjust the font family as needed */
+
+  scrollbar-color: transparent transparent; /* Firefox */
+
+  /* For Webkit browsers (Chrome, Safari) */
+}
+
+.logo-image {
+  width: 100%; /* Make the image fill the container */
+  max-width: 400px; /* Set a maximum width for the image */
+  height: auto; /* Maintain the aspect ratio */
+}
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-container {
+  flex-direction: column;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 0.5%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* Background image */
+  background-image: url("./images/top_bar.png");
+  background-size: cover; /* Adjust as needed */
+  background-repeat: no-repeat; /* Prevent image from repeating */
+  z-index: 1000;
+  display: flex;
+  height: 3em;
+}
+
+.logo-container {
+  display: flex;
+}
+
+.logo {
+  width: 10em;
+  height: auto;
+  position: center;
+  align-items: center;
+}
+
+.logo-text {
+  font-size: 18px;
+}
+
+.menu-tab {
+  font-size: 2rem;
+  cursor: pointer;
+  position: flex;
+  margin-right: 1em;
+  align-self: right;
+}
+
+.main {
+  display: flex;
+  height: 100%;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 2em;
+}
+
+.header-buttons a {
+  flex: 1;
+  text-decoration: none;
+  color: white;
+  padding: 1em 1.5em;
+  border-radius: 5px;
+  background-color: #333; /* Match the header background color */
+  transition: background-color 0.3s ease;
+}
+
+.header-buttons a:hover {
+  background-color: #555; /* Darken the background on hover */
+}
+.menu-header {
+  overflow-wrap: break-word;
+  width:100%;
+  display: flex;
+  /* align-items: flex-start; */
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  font-size: 10px;
+  margin-top: 50%;
+  height:100px;
+  color: #fff; /* Adjust the text color */
+}
+.accountinfo {
+  height:40px;
+  width:100px;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+.left-section {
+  flex: 1;
+}
+.wallet-button {
+  display: block;
+  height: 2.5em;
+  width: 10em;
+  background-color: #0056b3;
+  color: white;
+  border: 0.1em solid #0056b3;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  bottom: 20px;
+  /* transform: translateX(-50%); */
+}
+
+.wallet-section {
+  display: flex;
+  align-items: center;
+  /* gap: 1em; */
+}
+
+.middle-section {
+  flex: 1;
+  text-align: center;
+  margin-top: 1.1em;
+}
+
+.right-section {
+  flex: 1;
+  text-align: right;
+}
+.menu-header-text {
+  font-size: 1.2em; /* Adjust the font size */
+  margin-top: 50%;
+}
+.header-buttons a:last-child {
+  margin-right: 0; /* Remove margin for the last button */
+}
+.menu {
+  margin-top: 0%;
+  width: 10%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: -200vh;
+  transition: right 0.2s ease;
+  max-height: 100%;
+  z-index: 99;
+
+  /* Background image */
+  background-image: url("./images/menu_bar.png");
+  background-size: 100vh; /* Adjust as needed */
+  background-repeat: repeat-x; /* Prevent image from repeating */
+}
+
+.menu.open {
+  right: 0;
+}
+
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1%;
+  margin-top: 5%;
+  background: transparent;
+}
+
+.MM {
+  position: relative;
+  width: 100%; /* adjust this according to your container's width */
+  height: 100%; /* adjust this according to your container's height */
+}
+
+.MM img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.menu-button {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0%;
+  margin: 10%;
+  height: 3%;
+  width: 175%;
+  /* position: flex; Ensure the ::after pseudo-element is positioned relative to this element */
+}
+
+.Rewardsleft {
+  color: whitesmoke;
+}
+
+.menu-button img {
+  width: 30%;
+}
+
+.menu-button:focus {
+  outline: none; /* Remove focus outline for accessibility */
+}
+.read-more-button,
+.read-less-button {
+  background-color: #0056b3; /* Change to desired background color */
+  color: #fff; /* Change to desired text color */
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.read-more-button:hover,
+.read-less-button:hover {
+  background-color: #2980b9; /* Change to desired hover background color */
+}
+
+.logomiddle {
+  display: flex;
+  justify-content: center; /* Horizontally center */
+}
+
+/* Additional CSS for image if necessary */
+.logotop {
+  display: flex; /* Ensure the logo container is displayed */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Align to the bottom */
+}
+.logotop img {
+  width: 10em; /* Adjust the width of the logo as needed */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Align to the bottom */
+  margin-bottom: 1em;
+  margin-right: 5em;
+}
+.menu-button i {
+  max-height: 5%;
+  margin-top: 3vh;
+  margin-right: 2%; /* Adjust the spacing between icon and text */
+}
+
+.close-menu-tab {
+  font-size: 24px;
+  cursor: pointer;
+  justify-content: right; /* Horizontally center */
+  margin-top: 20px;
+}
+
+.banner {
+  margin-top: auto;
+  width: 100%;
+  height: 3em;
+  margin-bottom: 6em;
+}
+.banner img {
+  max-height: 99px;
+}
+
+.quizlist {
+  width: 45%; /* Adjust as needed */
+  height: 15%; /* Adjust as needed */
+  margin: 1% auto; /* Adjust as needed */
+  background-image: url("./images/menu_bar.png");
+  background-size: cover; /* Adjust as needed */
+  background-repeat: no-repeat; /* Prevent image from repeating */
+  padding: 2%; /* Adjust as needed */
+  border-radius: 1em; /* Adjust as needed */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.774);
+  overflow-x: auto; /* Add this line to hide overflowing content */
+  overflow-y: hidden;
+  opacity: 0; /* Initially set opacity to 0 */
+  animation: fadeInAnimation 1.5s ease forwards; /* Apply animation */
+  margin-bottom: 3em;
+}
+.quizlist h2 {
+  color: white;
+  margin-top: 0;
+}
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0; /* Start opacity */
+  }
+  to {
+    opacity: 1; /* End opacity */
+  }
+}
+
+.quizintro {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  align-items: flex-start; /* Align items to the top */
+  font-size: 24px;
+}
+
+.text-box {
+  flex: 1;
+  border-radius: 2em;
+  padding: 0px;
+  background-color: transparent;
+  color: white;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.object-details p {
+  margin: 0;
+}
+
+.image-container {
+  flex: 1;
+  height: 300px;
+  display: flex;
+  justify-content: center; /* Align the content to the bottom */
+  align-items: center; /* Align the content to the bottom */
+  max-height: 400px;
+}
+
+.object-image {
+  max-width: 80%; /* Adjusted to ensure image doesn't overflow container */
+  max-height: 400px; /* Adjust the height to be 80% of the container height */
+}
+
+.clickable-button {
+  cursor: pointer;
+  border: 0.1em solid #0056b3;
+  border-radius: 0.6em;
+  padding: 10px 20px;
+  background-color: #0056b3;
+  color: #fff;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+  margin-top: 1em; /* Adjust the margin-top value */
+  display: block; /* Ensure the element is treated as a block-level element */
+  width: max-content; /* Set the width to the content's width */
+  margin-left: auto; /* Automatically adjust left margin */
+  margin-right: auto; /* Automatically adjust right margin */
+  text-align: center; /* Center the text inside the button */
+}
+
+.clickable-button:hover {
+  animation: glow 1s infinite alternate; /* Apply the glow animation */
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 0.1em rgba(255, 255, 255, 0.3),
+      0 0 0.2em rgba(255, 255, 255, 0.5), 0 0 0.3em rgba(255, 255, 255, 0.7);
+  }
+
+  to {
+    box-shadow: 0 0 0.1em rgba(255, 255, 255, 0.3),
+      0 0 0.2em rgba(255, 255, 255, 0.5), 0 0 0.5em rgba(255, 255, 255, 0.7);
+  }
+}
+
+.wallet-info-section {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1em;
+  max-width: 20%;
+  background-color: transparent(77, 75, 75, 0.493);
+  border-radius: 0.5em;
+  margin-top: 4%; /* Adjust the margin as needed */
+  z-index: 1; /* Ensure it appears above other content */
+  color: grey;
+}
+
+.connected-wallet,
+.eth-balance,
+.wallet-value {
+  margin-bottom: 0.1em;
+}
+
+.wallet-connect-button {
+  cursor: pointer;
+  padding: 1em;
+  background-color: #0056b3;
+  color: #fff;
+  border: none;
+  border-radius: 0.6em;
+  font-size: 1em;
+  transition: background-color 0.3s;
+  margin-top: 1em;
+}
+
+.wallet-connect-button:hover {
+  background-color: #2980b9;
+}
+.footer {
+  background-image: url("./images/footer.png");
+  background-size: cover; /* Changed to cover */
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 3em;
+  z-index: 100;
+}
+
+.footer-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+
+.footer-text {
+  flex-grow: 1;
+  margin-left: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-copyright {
+  text-align: right;
+  font-size: 1em;
+}
+
+.fnx-logo-container {
+  margin-top: 15px; /* Adjust the margin-top value to increase or decrease the space */
+}
+
+.clickable-button2 {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px; /* Increase the font size */
+  margin: 0 15px; /* Increase the margin between buttons */
+  padding: 12px 16px; /* Increase padding for a larger button */
+  transition: box-shadow 0.3s ease;
+}
+
+.clickable-button2:hover {
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+}
+
+body::-webkit-scrollbar {
+  width: 0.1em;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.footer-text img {
+  width: 1em; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 1em; /* Adjust the value as needed */
+  bottom: 0;
+}
+
+.video-container {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.image-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.news-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.news-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000; /* Use a value higher than the footer's z-index */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.news-modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 1001; /* Use a value higher than the overlay's z-index */
+}
+.dividerbox {
+  background-color: transparent; /* Background color */
+  padding: 20px; /* Padding around the header */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.dividercontent {
+  text-align: center; /* Center the content */
+}
+
+.section-header {
+  max-height: 100px;
+  text-align: right;
+  font-size: 3em; /* Adjust font size */
+  color: #ffffff; /* Text color */
+  display: flex; /* Set display to flex */
+  height: auto;
+  align-items: right; /* Center items vertically */
+  justify-content: right; /* Center items horizontally */
+  flex: 1;
+}
+
+.faq-modal-overlay {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px); /* Apply blur effect to the modal overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.faq-modal {
+  background: white;
+  padding: 2em;
+  border-radius: 1em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.2);
+  z-index: 100000;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 35vh; /* Set your desired max width */
+  height: 60vh; /* Set your desired height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  margin-bottom: 20vh;
+}
+.close-button2 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.faq-modal-content {
+  max-width: 500px; /* Adjust the max-width as needed */
+  margin: 0 auto; /* Center the content horizontally */
+  text-align: center; /* Center the text */
+}
+
+.faq-modal-content button {
+  cursor: pointer;
+  background-color: #0056b3;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.faq-modal-content button:hover {
+  background-color: #0056b3;
+}
+
+.faq-section {
+  margin-bottom: 3vh;
+}
+
+.news-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.ad-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  overflow: hidden;
+  width: 100%;
+  height: 200px; /* Adjust height as needed */
+}
+
+.ad-card {
+  display: flex; /* Ensures centering within ad-container */
+  flex-direction: column; /* Stack header and content vertically */
+}
+
+.ad-content {
+  display: flex;
+  animation: scrollAds 30s linear infinite; /* Adjust duration as needed */
+  align-items: center; /* Center vertically */
+}
+
+.ad-content img {
+  width: 100%;
+  height: auto;
+  margin-right: 20px; /* Adjust spacing between images as needed */
+}
+
+@keyframes scrollAds {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.fackdiv {
+  width: 30%;
+}
+
+@media screen and (max-width: 800px) {
+  .logotop {
+    display: flex; /* Ensure the logo container is displayed */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Align to the bottom */
+  }
+  .banner img {
+    max-height: 100px;
+    margin: auto;
+  }
+
+  .logotop img {
+    max-width: 200%; /* Adjust the width of the logo as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+  .clickable-button2 {
+    display: none;
+  }
+  .logo {
+    width: 8em; /* Adjust logo width */
+  }
+  .logo-text {
+    display: none; /* Hide the logo text on smaller screens */
+  }
+
+  .menu-tab {
+    margin-right: 21em; /* Adjust margin for menu tab */
+  }
+
+  .menu {
+    width: 100%; /* Make the menu cover the full screen */
+    right: 0; /* Ensure the menu is fully visible */
+    right: -100%; /* Initially hide the menu off-screen */
+    transition: right 0.3s ease; /* Adjust transition duration as needed */
+  }
+
+  .menu.open {
+    right: 0; /* Keep the menu fully visible when opened */
+  }
+
+  .menu-content {
+    margin-top: -2em; /* Adjust margin as needed */
+    margin-left: 3em;
+  }
+
+  .header-buttons {
+    display: none; /* Hide header buttons on smaller screens */
+  }
+
+  .main {
+    padding-top: 3em; /* Adjust padding to accommodate the fixed header */
+  }
+  /* Adjust button styles */
+  .clickable-button,
+  .clickable-button2 {
+    font-size: 20px; /* Increase font size */
+    padding: 15px 30px; /* Increase padding for larger button */
+    margin: 10px; /* Increase margin for spacing */
+  }
+
+  .footer-text {
+    font-size: 10px; /* Decrease font size for smaller screens */
+  }
+
+  /* Adjust the padding of footer content */
+  .footer-content {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+  .footer-copyright {
+    font-size: 10px; /* Decrease font size for smaller screens */
+    width: 1000%; /* Ensure the text fits within the screen */
+    text-align: center; /* Center the text */
+  }
+  .quizintro {
+    flex-direction: column; /* Stack elements vertically */
+  }
+  .quizlist {
+    width: 90%; /* Adjust as needed */
+    height: 15%; /* Adjust as needed */
+    margin: 1% auto; /* Adjust as needed */
+    background-image: url("./images/menu_bar.png");
+    background-size: cover; /* Adjust as needed */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    padding: 2%; /* Adjust as needed */
+    border-radius: 1em; /* Adjust as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.774);
+    overflow-x: auto; /* Add this line to hide overflowing content */
+    overflow-y: hidden;
+    opacity: 0; /* Initially set opacity to 0 */
+    animation: fadeInAnimation 1.5s ease forwards; /* Apply animation */
+    margin-bottom: 3em;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .quizlist h2 {
+    color: white;
+    margin-top: 0;
+    font-size: 20px;
+  }
+  .text-box {
+    padding: 0em; /* Add padding */
+    border-radius: 1em; /* Add border radius for styling */
+    background-color: transparent; /* Set background color */
+    color: #ffffff; /* Set text color */
+    font-size: 14px;
+  }
+  .image-container {
+    width: 100%; /* Ensure image container takes full width */
+  }
+  .object-details p {
+    margin: 0.5em 0; /* Adjust spacing between paragraphs */
+  }
+  .section-header {
+    font-size: 3em;
+    color: transparent; /* Make the text transparent */
+    margin: 0;
+    padding-bottom: -1em;
+  }
+  .image-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
+
+  .object-image {
+    max-width: 100%; /* Ensure image doesn't overflow container */
+    max-height: 100%; /* Ensure image doesn't overflow container */
+    border-radius: 1em; /* Add border radius for styling */
+  }
+  .wallet-info-section {
+    padding: 1%; /* Reduce padding for wallet info section */
+    max-width: 50%; /* Adjust max-width to make it smaller */
+    font-size: 0.7em; /* Reduce font size for smaller screens */
+    display: flex;
+    position: absolute;
+  }
+
+  .wallet-connect-button {
+    padding: 0.8em; /* Reduce padding for "Connect Wallet" button */
+    font-size: 0.8em; /* Reduce font size for smaller screens */
+    display: flex;
+  }
+  body {
+    padding-top: 2em; /* Add padding to the top of the body */
+  }
+  .banner {
+    position: fixed; /* Ensure it stays at the bottom */
+    bottom: 0; /* Align it with the bottom of the screen */
+    margin-top: -3em; /* Adjust margin-top to move it higher from the bottom */
+    width: 100%;
+    height: 3em;
+    display: flex;
+    justify-content: center;
+  }
+}
+.wallet-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.wallet-modal {
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Box shadow for depth */
+  max-width: 80%;
+}
+
+.wallet-header h2 {
+  text-align: center;
+}
+
+.wallet-content {
+  text-align: center;
+}
+
+.wallet-options {
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.wallet-options li {
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+.wallet-option {
+  display: block; /* Display buttons as block elements */
+  width: 100%; /* Occupy full width */
+  margin-bottom: 10px; /* Add spacing between buttons */
+  padding: 10px; /* Add padding to buttons */
+  background-color: #f5f5f5; /* Button background color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Add border radius */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.wallet-button {
+  display: block;
+  height: 2.5em;
+  width: 10em;
+  background-color: #0056b3;
+  color: white;
+  border: 0.1em solid #0056b3;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  bottom: 20px;
+  /* transform: translateX(-50%); */
+}

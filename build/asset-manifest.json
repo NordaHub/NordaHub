@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/test/static/css/main.6f49aa83.css",
+    "main.js": "/test/static/js/main.478f1428.js",
+    "static/js/787.051c1900.chunk.js": "/test/static/js/787.051c1900.chunk.js",
+    "static/media/Nordahub_logo.svg": "/test/static/media/Nordahub_logo.890ec3b047be51157b4e18e716fff99a.svg",
+    "static/media/Nordahub_logo_white.svg": "/test/static/media/Nordahub_logo_white.8fe22a84ba88b854bbabd52cdc12e581.svg",
+    "static/media/FNX.svg": "/test/static/media/FNX.7d5c7af7acf69b05fefe24013c70fc5e.svg",
+    "static/media/solanaLogo.svg": "/test/static/media/solanaLogo.4396455eb015ffa3d3ffac51bcb86345.svg",
+    "static/media/ethereum-eth-logo-full-horizontal_white.svg": "/test/static/media/ethereum-eth-logo-full-horizontal_white.64846c9a822332369abdae02205bcaae.svg",
+    "static/media/Polygon_Logo.svg": "/test/static/media/Polygon_Logo.102451ed717885bb336f70de7f5ea13d.svg",
+    "static/media/Binance_logo.svg": "/test/static/media/Binance_logo.f3c9d710b7e60fcdad253447469f233e.svg",
+    "static/media/Concordium-Logo-White.svg": "/test/static/media/Concordium-Logo-White.028b2c1bcf12eedaca7f2ad99d98d13c.svg",
+    "static/media/bybit-seeklogo.svg": "/test/static/media/bybit-seeklogo.e270b4a0be09eeb2d1e4eefb0f9b7e5c.svg",
+    "index.html": "/test/index.html",
+    "main.6f49aa83.css.map": "/test/static/css/main.6f49aa83.css.map",
+    "main.478f1428.js.map": "/test/static/js/main.478f1428.js.map",
+    "787.051c1900.chunk.js.map": "/test/static/js/787.051c1900.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6f49aa83.css",
+    "static/js/main.478f1428.js"
+  ]
+}
