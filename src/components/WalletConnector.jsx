@@ -156,7 +156,7 @@ const WalletConnector = ({ network = 'mainnet' }) => {
                 <div>
                     <h3>Connected Account ID:</h3>
                     <p>{account}</p>
-                    <button onClick={handleButtonClick}>Perform Action</button>
+                    <button onClick={handleButtonClick}>Connect to CCD</button>
                 </div>
             ) : (
                 <p>{error || ''}</p>
