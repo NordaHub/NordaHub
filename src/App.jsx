@@ -135,7 +135,11 @@ const App = () => {
                 <div className="menu-header">
                   <div>
                     <button class="wallet-button" onClick={openWeb3Modal}>
-                      Connect Wallet
+                      {account ? (
+                        <span>Disconnect Wallet</span>
+                      ) : (
+                        <span>Connect Wallet</span>
+                      )}
                     </button>
                   </div>
                   <div>
