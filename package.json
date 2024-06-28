@@ -1,0 +1,40 @@
+{
+  "homepage": "https://nordahub.io/",
+  "name": "betanordahub",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@concordium/wallet-connectors": "^0.5.1",
+    "@concordium/web-sdk": "^7.4.0",
+    "ethers": "^6.12.0",
+    "firebase": "^10.8.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.3",
+    "react-scripts": "4.0.3",
+    "vite": "^5.2.9",
+    "vuex": "^3.6.2",
+    "web-vitals": "^2.1.4",
+    "web3": "^4.8.0",
+    "web3modal": "^1.9.12"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts --openssl-legacy-provider start",
+    "build": "react-scripts --openssl-legacy-provider build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ]
+}
