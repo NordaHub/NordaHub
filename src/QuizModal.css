@@ -1,0 +1,314 @@
+/* QuizModal.css */
+::-webkit-scrollbar {
+  display: none;
+}
+
+.quiz-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(2px);
+  /* Add a blur effect to the background */
+  display: flex;
+  flex-direction: column;
+  /* Display children in a column layout */
+  align-items: center;
+  /* Center content horizontally */
+  justify-content: center;
+  /* Center content vertically */
+  z-index: 1000;
+  /* Ensure it's above other content */
+  border-color: rgb(237, 237, 237);
+  border-radius: 2vh;
+  color: whitesmoke;
+}
+
+.short-option {
+  display: inline-block;
+  margin-right: 10px;
+  /* Adjust margin as needed */
+}
+
+.long-option {
+  display: block;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.option-container {
+  display: flex;
+  padding: 10px 10px;
+  /* Add padding for spacing between options */
+}
+
+.option-container:last-child {
+  border-bottom: none;
+  /* Remove the border for the last option */
+}
+
+.radio-button-container {
+  display: flex;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio-button-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.radio-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1rem;
+  width: 1rem;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+/* On mouse-over, add a background color */
+.radio-button-container:hover input~.radio-checkmark {
+  background-color: #fff;
+}
+
+
+
+/* When the radio button is checked, apply background */
+.radio-button-container input:checked~.radio-checkmark {
+  background-color: transparent;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radio-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-button-container input:checked~.radio-checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio-button-container .radio-checkmark:after {
+  top: 0.125rem;
+  left: 0.125rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.option-text-container {
+  flex-grow: 1;
+  text-align: left;
+  /* Align text to the left */
+}
+
+
+.long-option br {
+  display: none;
+  /* Hide line breaks for long options */
+}
+
+.quiz-modal {
+  background-image: url('./images/card_bg.png');
+  background-size: 100%;
+  padding: 5em;
+  border-radius: 1em;
+  box-shadow: 0 0 20px 5px rgba(83, 83, 83, 0.861);
+  /* Add box-shadow for glowing effect */
+  transform: scale(1.2);
+  z-index: 1001;
+  position: relative;
+  /* Ensure the modal is a positioned container for absolute positioning */
+  display: flex;
+  flex-direction: column;
+  height: 30em;
+  width: 30em;
+}
+
+.header-containerQ img {
+  max-width: 200px;
+  max-height: 100px;
+
+}
+
+
+.final-screen {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  /* Ensure the container takes up the full height */
+}
+
+.final-screen h3,
+.final-screen p,
+.final-screen button {
+  margin-bottom: 10px;
+  /* Add some spacing between elements */
+}
+
+.header-containerQ {
+  width: 30em;
+  height: auto;
+  overflow: hidden;
+  border: #fbfffb;
+  border-radius: 1em;
+  background: none;
+  max-width: 30em;
+  max-height: auto;
+}
+
+.image-containerQ {
+  display: grid;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.header-image {
+  width: 100%;
+  max-width: 100%;
+  height: 200px;
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+  /* Ensure the image covers the container without stretching */
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: whitesmoke;
+}
+
+.h3 {
+  font-weight: 700;
+  color: #c7c4c4;
+}
+
+.quiz-header h2 {
+  margin-top: 15px;
+  width: 20em;
+}
+
+
+
+.quiz-options {
+  align-items: flex-start;
+  /* Aligns items to the left */
+  justify-content: flex-start;
+  /* Ensures items are justified to the start */
+}
+
+.quiz-options label {
+
+  align-self: flex-start;
+  margin-bottom: 10px;
+  font-weight: 200;
+  max-width: 100%;
+  /* Set a maximum width for the label */
+  word-wrap: break-word;
+  /* Allow long words to break onto new lines */
+  overflow-wrap: break-word;
+  /* Ensure long words are broken onto new lines */
+}
+
+
+.quiz-content {
+  display: grid;
+  align-items: flex-end;
+  display: table-column;
+  background: #72727246;
+  padding: 1%;
+  border-radius: 1em;
+  /* Adjust as needed */
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+
+}
+
+.submit-button {
+  position: absolute;
+  display: block;
+  padding: 0.8em 1em;
+  background-color: #0056b3;
+  color: white;
+  border: 0.1em solid #0056b3;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.submit-button:hover {
+  /* Apply the glow animation */
+  animation: glow 1s infinite alternate;
+}
+
+
+@media screen and (max-width: 800px) {
+  @import url('https://fonts.googleapis.com/css2?family=Flow+Block&display=swap');
+
+  .quiz-modal {
+    width: 80%;
+    height: 80%;
+    padding: 2.2em;
+    transform: scale(1);
+    /* Adjust scale for smaller screens */
+  }
+
+  .header-containerQ {
+    width: 100%;
+    height: 50;
+  }
+
+  .header-image {
+    height: auto;
+  }
+
+  .quiz-content {
+    padding: 1%;
+    max-height: 300px;
+    max-width: 400px;
+  }
+
+  .quiz-header h2 {
+    width: 100%;
+  }
+
+
+  .option-container {
+    font-size: 14px;
+  }
+
+  .quiz-header h2 {
+    font-size: 16px;
+  }
+
+}
